@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "./variables.scss";
+
+body {
+  background-color: $bg-primary;
+  font-family: "Inter", system-ui;
+}
+.primary-btn {
+  background-color: $primary;
+  color: $bg-primary;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.g {
+  &-1 {
+    gap: 4px;
+  }
+  &-2 {
+    gap: 8px;
+  }
+  &-3 {
+    gap: 12px;
+  }
+  &-4 {
+    gap: 16px;
+  }
+  &-5 {
+    gap: 18px;
+  }
+}
+
+// Global scrollbar styling in styles.scss
+
+// Scrollbar width and height
+::-webkit-scrollbar {
+  width: 4px; // Width of vertical scrollbar
+  height: 4px; // Height of horizontal scrollbar
+}
+
+// Scrollbar track (background)
+::-webkit-scrollbar-track {
+  background: $bg-primary;
+  border-radius: 6px;
+}
+
+// Scrollbar thumb (the draggable part)
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 6px;
+}
+
+// Scrollbar thumb on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

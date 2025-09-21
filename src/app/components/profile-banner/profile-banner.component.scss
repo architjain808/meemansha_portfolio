@@ -1,0 +1,108 @@
+@import "../../../variables.scss";
+
+.banner-container {
+  min-width: 100%;
+  height: 80vh;
+  position: relative;
+  margin-top: 5rem;
+
+  .profile-text {
+    position: absolute;
+    left: 6vw;
+    top: 8.75vw;
+    .sub-text {
+      font-family: "Inter", system-ui;
+      font-size: 1.2vw;
+      font-weight: 400;
+      position: absolute;
+      top: 5vw;
+      left: 12.5vw;
+      color: $secondary;
+      letter-spacing: 2.3vw;
+    }
+    .main-heading {
+      font-family: "Caveat", system-ui;
+      font-size: 12vw;
+      font-weight: 600;
+      color: $primary;
+      letter-spacing: 12px;
+    }
+  }
+
+  .lady-img {
+    height: 80%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.chip-container {
+  max-width: 60vw;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: $primary;
+  color: $bg-primary;
+  border-radius: 14px;
+  .pointer {
+    display: block;
+    height: 10px;
+  }
+  .pointer-primary {
+    display: none;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+// @media (max-width: 468px) {
+//   .main-heading {
+//     font-size: 50px !important;
+//   }
+// }
+@media (max-width: 768px) {
+  .banner-container {
+    height: 59vh;
+  }
+
+  .profile-text {
+    top: 0 !important;
+    left: 12% !important;
+
+    .sub-text {
+      top: 3.5vw !important;
+      letter-spacing: 2.8vw !important;
+      font-size: 10px !important;
+    }
+
+    .chip-container {
+      gap: 0;
+      position: absolute;
+      left: -40px;
+      .chip {
+        background: none;
+        color: $primary;
+        .pointer {
+          display: none;
+        }
+        .pointer-primary {
+          display: block;
+          height: 8px;
+        }
+        p {
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .lady-img {
+    z-index: -1;
+  }
+}

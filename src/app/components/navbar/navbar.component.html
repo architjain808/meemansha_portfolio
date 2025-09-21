@@ -1,0 +1,54 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Desktop Navigation Links -->
+    <div class="navbar-links w-100">
+      <a class="nav-link">About</a>
+      <a class="nav-link">Services</a>
+      <a class="nav-link">Contact</a>
+      <a class="nav-link primary-btn">Shedule a Call</a>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <div class="nav-mobile-container w-100">
+      <button
+        class="hamburger-btn"
+        (click)="toggleMobileNav()"
+        [class.active]="mobileNavOpen"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <a class="nav-link primary-btn">Shedule a Call</a>
+    </div>
+  </div>
+
+  <!-- Mobile Overlay -->
+  <div
+    class="mobile-overlay"
+    [class.active]="mobileNavOpen"
+    (click)="closeMobileNav()"
+  ></div>
+
+  <!-- Mobile Side Navigation -->
+  <div class="mobile-nav" [class.active]="mobileNavOpen">
+    <div class="mobile-nav-header">
+      <button class="close-btn" (click)="closeMobileNav()">×</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a class="mobile-nav-link" (click)="onNavItemClick()">
+        <span>About</span>
+      </a>
+      <a class="mobile-nav-link" (click)="onNavItemClick()">
+        <span>Services</span>
+      </a>
+      <a class="mobile-nav-link" (click)="onNavItemClick()">
+        <span>Contact</span>
+      </a>
+      <a class="mobile-nav-link" (click)="onNavItemClick()">
+        <span>Book Now</span>
+      </a>
+    </div>
+  </div>
+</nav>
