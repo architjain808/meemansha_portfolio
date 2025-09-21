@@ -68,7 +68,7 @@
 // }
 @media (max-width: 768px) {
   .banner-container {
-    height: 59vh;
+    height: 39vh;
   }
 
   .profile-text {
@@ -103,6 +103,7 @@
     }
   }
   .lady-img {
+    // height: 50% !important;
     z-index: -1;
   }
 }
