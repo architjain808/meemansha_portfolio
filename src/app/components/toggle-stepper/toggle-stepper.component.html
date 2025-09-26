@@ -1,0 +1,11 @@
+<div class="toggle-container">
+  @for (step of steps; track $index) {
+  <button
+    class="toogle-steps"
+    [ngClass]="{ active: selectedItem == step.key }"
+    (click)="selectedItem = step.key"
+  >
+    {{ step.value }}
+  </button>
+  }
+</div>

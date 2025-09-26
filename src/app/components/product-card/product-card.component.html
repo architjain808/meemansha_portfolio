@@ -1,0 +1,55 @@
+<div class="product-card">
+  <!-- Main Image Section -->
+  <div class="card-image-container">
+    <img [src]="product.mainImage" [alt]="product.title" class="card-image" />
+
+    <!-- Rating Overlay -->
+    <div class="rating-overlay">
+      <span class="star-icon">★</span>
+      <span class="rating-value">{{ product.rating }}</span>
+    </div>
+  </div>
+
+  <!-- Card Content -->
+  <div class="card-content d-flex flex-column justify-content-between">
+    <!-- Main Heading -->
+    <div>
+      <h3 class="card-title">{{ product.title }}</h3>
+
+      <!-- Sub Heading -->
+      <p class="card-subtitle">{{ product.subtitle }}</p>
+    </div>
+
+    <!-- Bottom Pricing Section -->
+    <div class="pricing-section">
+      <div class="product-info">
+        <!-- Left Icon -->
+        <div class="product-icon">
+          <img
+            [src]="product.icon"
+            [alt]="product.productType"
+            class="icon-image"
+          />
+        </div>
+
+        <div class="product-details">
+          <!-- Product Type -->
+          <span class="product-type">{{ product.productType }}</span>
+
+          <!-- Product Sales -->
+          <span class="product-sales">{{ product.productTypeDesc }}</span>
+        </div>
+      </div>
+
+      <!-- Price Button -->
+      <button class="price-button" type="button">
+        @if(product.originalPrice){
+        <span class="original-price">₹{{ product.originalPrice }}</span>
+        }
+
+        <span class="discounted-price">₹{{ product.discountedPrice }}</span>
+        <span class="arrow-icon">→</span>
+      </button>
+    </div>
+  </div>
+</div>

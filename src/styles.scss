@@ -64,3 +64,17 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.heading {
+  font-family: "Caveat", system-ui;
+}
+
+$f-sizes: (12, 14, 16, 18, 20, 24, 28, 32);
+
+.f {
+  @each $val in $f-sizes {
+    &-#{$val} {
+      font-size: #{$val}px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<app-toggle-stepper></app-toggle-stepper>
+
+<div class="card-container row m-4">
+  @for (card of allCards; track $index) {
+  <app-product-card
+    class="col-lg-3 col-md-4 pb-3"
+    [product]="card"
+  ></app-product-card>
+  }
+</div>
