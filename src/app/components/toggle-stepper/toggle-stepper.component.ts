@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-stepper',
@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './toggle-stepper.component.html',
   styleUrl: './toggle-stepper.component.scss'
 })
-export class ToggleStepperComponent {
+export class ToggleStepperComponent implements OnInit {
+
+  @Output() stepChange = new EventEmitter<number>()
+
   selectedItem = 1
   steps = [
     {
@@ -23,4 +26,14 @@ export class ToggleStepperComponent {
       value: 'Package'
     }
   ]
+
+  ngOnInit(): void {
+    this.stepChange.emit(1)
+
+  }
+
+  stepperChange(step: number) {
+    this.selectedItem = step
+    this.stepChange.emit(step)
+  }
 }

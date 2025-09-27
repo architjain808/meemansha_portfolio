@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToggleStepperComponent } from "../../components/toggle-stepper/toggle-stepper.component";
-import { ProductCardComponent } from "../../components/product-card/product-card.component";
+import { ProductCard, ProductCardComponent } from "../../components/product-card/product-card.component";
 import { AllProductCard } from '../../constants/cardsData';
 
 @Component({
@@ -10,5 +10,10 @@ import { AllProductCard } from '../../constants/cardsData';
   styleUrl: './pricing.component.scss'
 })
 export class PricingComponent {
-  allCards = AllProductCard
+  allCards: ProductCard[] = AllProductCard
+  filteredCard: ProductCard[] = []
+
+  stepChange(id: any) {
+    this.filteredCard = this.allCards.filter(card => card.id == id)
+  }
 }

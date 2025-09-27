@@ -3,7 +3,7 @@
   <button
     class="toogle-steps"
     [ngClass]="{ active: selectedItem == step.key }"
-    (click)="selectedItem = step.key"
+    (click)="stepperChange(step.key)"
   >
     {{ step.value }}
   </button>

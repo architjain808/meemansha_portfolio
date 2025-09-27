@@ -1,7 +1,7 @@
-<app-toggle-stepper></app-toggle-stepper>
+<app-toggle-stepper (stepChange)="stepChange($event)"></app-toggle-stepper>
 
 <div class="card-container row m-4">
-  @for (card of allCards; track $index) {
+  @for (card of filteredCard; track $index) {
   <app-product-card
     class="col-lg-3 col-md-4 pb-3"
     [product]="card"
